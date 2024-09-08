@@ -251,9 +251,9 @@
             button.disabled = true; // Désactiver le bouton une fois cliqué
 
             // Ouvrir l'URL dans un nouvel onglet immédiatement
-            //const newWindow = window.open(url, '_blank');
+            const newWindow = window.open(url, '_blank');
              // Ouvrir l'URL dans une nouvelle fenêtre immédiatement
-            const newWindow = window.open(url, '_blank', 'width=800,height=600,top=100,left=100');
+            //const newWindow = window.open(url, '_blank', 'width=800,height=600,top=100,left=100');
 		
             const interval = setInterval(function() {
                 const minutes = Math.floor(timeLeft / 60);
