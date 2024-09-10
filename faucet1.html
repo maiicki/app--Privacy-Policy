@@ -4,8 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>faucet</title>
+
+    <!-- Lien vers Google Fonts pour ajouter une jolie police -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lobster&family=Roboto:wght@400;700&display=swap">
+
     <style>
-         .hidden {
+        .hidden {
             display: none;
         }
         .countdown {
@@ -20,21 +24,78 @@
             background-color: grey;
             cursor: not-allowed;
         }
-		.center-content {
+        .center-content {
             text-align: center;
+        }
+
+        /* Style pour les deux colonnes */
+        .container {
+            display: flex;
+            justify-content: space-between;
+            margin: 0 auto;
+            max-width: 1200px; /* Largeur maximale du conteneur */
+			
+        }
+        .column {
+            width: 48%; /* Largeur de chaque colonne */
+            padding: 10px;
+        }
+        .column-left {
+            border-right: 2px solid #000; /* Trait entre les colonnes */
+        }
+        .column h2 {
+            text-align: center;
+            //font-family: 'Lobster', cursive; /* Police pour h2 */
+			padding: 15px 25px;
+            margin: 10px;
+            font-size: 18px;
+            font-weight: 600;
+            color: white;
+            background-color: #3498db;
+            border-radius: 30px;
+            text-decoration: none;
+        }
+        h1 {
+            //color: #2c3e50;
+            text-align: center;
+            //font-weight: 600;
+            //margin-top: 20px;
+			padding: 15px 25px;
+            margin: 10px;
+            font-size: 18px;
+            font-weight: 600;
+            color: white;
+			//color: #2c3e50;
+            background-color: #3498db;
+            border-radius: 10px;
+            //text-decoration: none;
+        }
+        }
+        /* Séparation entre les colonnes */
+        .separator {
+            margin: 20px 0;
+            border-bottom: 2px solid #000;
+        }
+        /* Ajustement de la taille des images */
+        .item img {
+            width: 30px;
+            height: 30px;
+            vertical-align: middle;
         }
     </style>
 </head>
-<center><u><h1>DASHBORD FAUCETS</h1></u></center>
-<br>
-<br>
-<center>-------------------------------------------------------------------------------------------------</center>
 <body>
-    <center><u><h2>StarFaucet</h2></u></center>
-	
-	
-    <div class="address-list">
-        <div class="item1">
+    <center><h1>Dashbord Faucets</h1></center>
+    <br>
+<br>
+<br>
+    <div class="container">
+        <!-- StarFaucet Section -->
+        <div class="column column-left">
+            <h2>StarFaucet</h2>
+			<br><br>
+            <div class="address-list">
+                <div class="item1">
             <img src="https://raw.githubusercontent.com/maiicki/app--Privacy-Policy/main/imagescryptos/btc.png" width="25" height="25" alt="Bitcoin">
           <button onclick="startCountdown('https://starcoins.ws/btc-faucet/', this)">Claim</button> 
             <span class="countdown hidden">00m 00s</span>
@@ -134,13 +195,16 @@
             <button onclick="startCountdown('https://starcoins.ws/fey-faucet/', this)">Claim</button> 
             <span class="countdown hidden">00m 00s</span>
         </div>
-		<br>
-<br>
-<center>-------------------------------------------------------------------------------------------------</center>
-<body>
-    <center><u><h2>MomoCoins</h2></u></center>
-		<div class="address-list">
-        <div class="item21">
+                <!-- Ajoutez les autres items StarFaucet ici comme dans votre code original -->
+            </div>
+        </div>
+
+        <!-- MomoCoins Section -->
+        <div class="column">
+            <h2>MomoCoins</h2>
+			<br><br>
+            <div class="address-list">
+                <div class="item21">
             <img src="https://raw.githubusercontent.com/maiicki/app--Privacy-Policy/main/imagescryptos/btc.png" width="25" height="25" alt="Bitcoin">
           <button onclick="startCountdown('https://momocoins.net/btc-faucet/', this)">Claim</button> 
             <span class="countdown hidden">00m 00s</span>
@@ -240,35 +304,44 @@
             <button onclick="startCountdown('https://momocoins.net/fey-faucet/', this)">Claim</button> 
             <span class="countdown hidden">00m 00s</span>
         </div>
-
+                <!-- Ajoutez les autres items MomoCoins ici comme dans votre code original -->
+            </div>
+        </div>
     </div>
 
     <script>
-        function startCountdown(url, button) {
-            const countdownElement = button.nextElementSibling;
-            countdownElement.classList.remove('hidden');
+    function startCountdown(url, button) {
+        const countdownElement = button.nextElementSibling;
+        countdownElement.classList.remove('hidden');
 
-            let timeLeft = 360; // Durée du compte à rebours en secondes (ici 6 minutes)
-            button.disabled = true; // Désactiver le bouton une fois cliqué
+        let timeLeft = 360; // Durée du compte à rebours en secondes (6 minutes)
+        button.disabled = true; // Désactiver le bouton une fois cliqué
 
-            // Ouvrir l'URL dans un nouvel onglet immédiatement
-            const newWindow = window.open(url, '_blank');
-		// Ouvrir l'URL dans une nouvelle fenêtre immédiatement
-            //const newWindow = window.open(url, '_blank', 'width=800,height=600,top=100,left=100');
-            const interval = setInterval(function() {
-                const minutes = Math.floor(timeLeft / 60);
-                const seconds = timeLeft % 60;
-                countdownElement.textContent = `Temps restant : ${minutes}m ${seconds}s`;
-                timeLeft--;
+        // Ouvrir l'URL dans un nouvel onglet immédiatement
+        const newWindow = window.open(url, '_blank');
 
-                if (timeLeft < 0) {
-                    clearInterval(interval);
-                    countdownElement.textContent = '00m 00s';
-                    button.disabled = false; // Réactiver le bouton si nécessaire après la fin du compte à rebours
-                }
-            }, 1000);
+        const endTime = Date.now() + timeLeft * 1000; // Calculer l'heure de fin
+
+        function updateCountdown() {
+            const now = Date.now();
+            const remainingTime = Math.max(0, Math.floor((endTime - now) / 1000));
+            const minutes = Math.floor(remainingTime / 60);
+            const seconds = remainingTime % 60;
+
+            countdownElement.textContent = `Temps restant : ${minutes}m ${seconds}s`;
+
+            if (remainingTime > 0) {
+                // Utiliser setTimeout au lieu de setInterval pour recalculer le temps restant
+                setTimeout(updateCountdown, 1000);
+            } else {
+                countdownElement.textContent = '00m 00s';
+                button.disabled = false; // Réactiver le bouton après la fin du compte à rebours
+            }
         }
-    </script>
+
+        updateCountdown(); // Démarrer la mise à jour du compte à rebours
+    }
+</script>
 
 </body>
 </html>
