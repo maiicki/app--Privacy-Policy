@@ -4,8 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>faucet</title>
+
+    <!-- Lien vers Google Fonts pour ajouter une jolie police -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lobster&family=Roboto:wght@400;700&display=swap">
+
     <style>
-         .hidden {
+        .hidden {
             display: none;
         }
         .countdown {
@@ -20,255 +24,326 @@
             background-color: grey;
             cursor: not-allowed;
         }
-		.center-content {
+        .center-content {
             text-align: center;
+        }
+
+        /* Style pour les deux colonnes */
+        .container {
+            display: flex;
+            justify-content: space-between;
+            margin: 0 auto;
+            max-width: 1200px; /* Largeur maximale du conteneur */
+			
+        }
+        .column {
+            width: 48%; /* Largeur de chaque colonne */
+            padding: 10px;
+        }
+        .column-left {
+            border-right: 2px solid #000; /* Trait entre les colonnes */
+        }
+        .column h2 {
+            text-align: center;
+            //font-family: 'Lobster', cursive; /* Police pour h2 */
+			padding: 15px 25px;
+            margin: 10px;
+            font-size: 18px;
+            font-weight: 600;
+            color: white;
+            background-color: #3498db;
+            border-radius: 30px;
+            text-decoration: none;
+        }
+        h1 {
+            //color: #2c3e50;
+            text-align: center;
+            //font-weight: 600;
+            //margin-top: 20px;
+			padding: 15px 25px;
+            margin: 10px;
+            font-size: 18px;
+            font-weight: 600;
+            color: white;
+			//color: #2c3e50;
+            background-color: #3498db;
+            border-radius: 10px;
+            //text-decoration: none;
+        }
+        }
+        /* Séparation entre les colonnes */
+        .separator {
+            margin: 20px 0;
+            border-bottom: 2px solid #000;
+        }
+        /* Ajustement de la taille des images */
+        .item img {
+            width: 30px;
+            height: 30px;
+            vertical-align: middle;
         }
     </style>
 </head>
-<center><u><h1>DASHBORD FAUCETS</h1></u></center>
-<br>
-<br>
-<center>-------------------------------------------------------------------------------------------------</center>
 <body>
-    
-    <center><u><h2>BeeFAUCET</h2></u></center>
-		<div class="address-list">
-        <div class="ite1">
-            1.beefaucet.org  <span style="color: green;">BITCOIN</span>
-          <button onclick="startCountdown('https://beefaucet.org/btc-faucet/', this)">btc</button> 
+    <center><h1>Dashboard Faucets</h1></center>
+	 <a href="https://maiicki.github.io/app--Privacy-Policy/"> <div style="text-align: right;">Accueil</a></div>
+
+    <br>
+<br>
+<br>
+    <div class="container">
+        <!-- StarFaucet Section -->
+        <div class="column column-left">
+            <h2>BeeFaucet</h2>
+			<br><br>
+            <div class="address-list">
+                <div class="item1">
+            <img src="https://raw.githubusercontent.com/maiicki/app--Privacy-Policy/main/imagescryptos/btc.png" width="25" height="25" alt="Bitcoin">
+          <button onclick="startCountdown('https://beefaucet.org/btc-faucet/', this)">Claim</button> 
             <span class="countdown hidden">00m 00s</span>
 		</div>
-		<div class="ite2">
-            2.beefaucet.org <span style="color: green;">ETHERUM</span> 
-            <button onclick="startCountdown('https://beefaucet.org/eth-faucet/', this)">eth</button> 
+		<div class="item2">
+            <img src="https://raw.githubusercontent.com/maiicki/app--Privacy-Policy/main/imagescryptos/eth.png" width="25" height="25" alt="etherum">
+            <button onclick="startCountdown('https://beefaucet.org/eth-faucet/', this)">Claim</button> 
             <span class="countdown hidden">00m 00s</span>
         </div>
-		<div class="ite3">
-            3.beefaucet.org  <span style="color: green;">TETHER</span>   
-            <button onclick="startCountdown('https://beefaucet.org/usdt-faucet/', this)">usdt</button> 
+		<div class="item3">
+            <img src="https://raw.githubusercontent.com/maiicki/app--Privacy-Policy/main/imagescryptos/usdt.png"  width="25" height="25" alt="tether">  
+            <button onclick="startCountdown('https://beefaucet.org/usdt-faucet/', this)">Claim</button> 
             <span class="countdown hidden">00m 00s</span>
         </div>
-		<div class="ite4">
-            4.beefaucet.org  <span style="color: green;">BINANCE</span> 
-            <button onclick="startCountdown('https://beefaucet.org/bnb-faucet/', this)">bnb</button> 
+		<div class="item4">
+            <img src="https://raw.githubusercontent.com/maiicki/app--Privacy-Policy/main/imagescryptos/bnb.png"  width="25" height="25" alt="binance">
+            <button onclick="startCountdown('https://beefaucet.org/bnb-faucet/', this)">Claim</button> 
             <span class="countdown hidden">00m 00s</span>
         </div>
-		<div class="ite5">
-            5.beefaucet.org <span style="color: green;">SOLANA</span> 
-            <button onclick="startCountdown('https://beefaucet.org/sol-faucet/', this)">sol</button> 
+		<div class="item5">
+            <img src="https://raw.githubusercontent.com/maiicki/app--Privacy-Policy/main/imagescryptos/sol.png" width="25" height="25" alt="solana"> 
+            <button onclick="startCountdown('https://beefaucet.org/sol-faucet/', this)">Claim</button> 
             <span class="countdown hidden">00m 00s</span>
         </div>
-		<div class="ite6">
-           6.beefaucet.org  <span style="color: green;">USDC</span> 
-            <button onclick="startCountdown('https://beefaucet.org/usdc-faucet/', this)">usdc</button> 
+		<div class="item6">
+           <img src="https://raw.githubusercontent.com/maiicki/app--Privacy-Policy/main/imagescryptos/usdc.png" width="25" height="25" alt="usdc">  
+            <button onclick="startCountdown('https://beefaucet.org/usdc-faucet/', this)">Claim</button> 
             <span class="countdown hidden">00m 00s</span>
         </div>
-		<div class="ite7">
-            7.beefaucet.org  <span style="color: green;">RIPPLE</span>  
-            <button onclick="startCountdown('https://beefaucet.org/xrp-faucet/', this)">xrp</button> 
+		<div class="item7">
+            <img src="https://raw.githubusercontent.com/maiicki/app--Privacy-Policy/main/imagescryptos/xrp.png" width="25" height="25" alt="riple"> 
+            <button onclick="startCountdown('https://beefaucet.org/xrp-faucet/', this)">Claim</button> 
             <span class="countdown hidden">00m 00s</span>
         </div>
-		<div class="ite8">
-            8.beefaucet.org  <span style="color: green;">DOGECOIN</span> 
-            <button onclick="startCountdown('https://beefaucet.org/doge-faucet/', this)">doge</button> 
+		<div class="item8">
+            <img src="https://raw.githubusercontent.com/maiicki/app--Privacy-Policy/main/imagescryptos/doge.png" width="25" height="25" alt="dogecoin">
+            <button onclick="startCountdown('https://beefaucet.org/doge-faucet/', this)">Claim</button> 
             <span class="countdown hidden">00m 00s</span>
         </div>
-		<div class="ite9">
-            9.beefaucet.org  <span style="color: green;">TRON</span> 
-            <button onclick="startCountdown('https://beefaucet.org/trx-faucet/', this)">trx</button> 
+		<div class="item9">
+            <img src="https://raw.githubusercontent.com/maiicki/app--Privacy-Policy/main/imagescryptos/tron.png" width="25" height="25" alt="tron">  
+            <button onclick="startCountdown('https://beefaucet.org/trx-faucet/', this)">Claim</button> 
             <span class="countdown hidden">00m 00s</span>
         </div>
-		<div class="ite10">
-            10.beefaucet.org  <span style="color: green;">TON</span> 
-            <button onclick="startCountdown('https://beefaucet.org/ton-faucet/', this)">ton</button> 
+		<div class="item10">
+            <img src="https://raw.githubusercontent.com/maiicki/app--Privacy-Policy/main/imagescryptos/ton.png" width="25" height="25" alt="ton">  
+            <button onclick="startCountdown('https://beefaucet.org/ton-faucet/', this)">Claim</button> 
             <span class="countdown hidden">00m 00s</span>
         </div>
-		<div class="ite11">
-            11.beefaucet.org  <span style="color: green;">BITCOINCASH</span> 
-            <button onclick="startCountdown('https://beefaucet.org/bch-faucet/', this)">bch</button> 
+		<div class="item11">
+            <img src="https://raw.githubusercontent.com/maiicki/app--Privacy-Policy/main/imagescryptos/bch.png" width="25" height="25" alt="bitcoin cash"> 
+            <button onclick="startCountdown('https://beefaucet.org/bch-faucet/', this)">Claim</button> 
             <span class="countdown hidden">00m 00s</span>
         </div>
-		<div class="ite12">
-            12.beefaucet.org  <span style="color: green;">CARDANO</span>  
-            <button onclick="startCountdown('https://beefaucet.org/ada-faucet/', this)">ada</button> 
+		<div class="item12">
+            <img src="https://raw.githubusercontent.com/maiicki/app--Privacy-Policy/main/imagescryptos/ada.png" width="25" height="25" alt="cardano">    
+            <button onclick="startCountdown('https://beefaucet.org/ada-faucet/', this)">Claim</button> 
             <span class="countdown hidden">00m 00s</span>
         </div>
-		<div class="ite13">
-            13.beefaucet.org  <span style="color: green;">LITCOIN</span>  
-            <button onclick="startCountdown('https://beefaucet.org/ltc-faucet/', this)">ltc</button> 
+		<div class="item13">
+            <img src="https://raw.githubusercontent.com/maiicki/app--Privacy-Policy/main/imagescryptos/ltc.png"  width="25" height="25" alt="litecoin">  
+            <button onclick="startCountdown('https://beefaucet.org/ltc-faucet/', this)">Claim</button> 
             <span class="countdown hidden">00m 00s</span>
        </div>
-		<div class="ite14">
-            14.beefaucet.org  <span style="color: green;">MATIC</span>  
-            <button onclick="startCountdown('https://beefaucet.org/matic-faucet/', this)">matic</button> 
+		<div class="item14">
+            <img src="https://raw.githubusercontent.com/maiicki/app--Privacy-Policy/main/imagescryptos/matic.png" width="25" height="25" alt="matic">     
+            <button onclick="startCountdown('https://beefaucet.org/matic-faucet/', this)">Claim</button> 
             <span class="countdown hidden">00m 00s</span>
         </div>
-		<div class="ite15">
-            15.beefaucet.org  <span style="color: green;">MONERO</span>  
-            <button onclick="startCountdown('https://beefaucet.org/xmr-faucet/', this)">xmr</button> 
+		<div class="item15">
+            <img src="https://raw.githubusercontent.com/maiicki/app--Privacy-Policy/main/imagescryptos/xmr.png" width="25" height="25" alt="monero">    
+            <button onclick="startCountdown('https://beefaucet.org/xmr-faucet/', this)">Claim</button> 
             <span class="countdown hidden">00m 00s</span>
         </div>
-		<div class="ite16">
-            16.beefaucet.org  <span style="color: green;">STELAR</span>  
-            <button onclick="startCountdown('https://beefaucet.org/xlm-faucet/', this)">xlm</button> 
+		<div class="item16">
+            <img src="https://raw.githubusercontent.com/maiicki/app--Privacy-Policy/main/imagescryptos/xlm.png" width="25" height="25" alt="stellar"> 
+            <button onclick="startCountdown('https://beefaucet.org/xlm-faucet/', this)">Claim</button> 
             <span class="countdown hidden">00m 00s</span>
         </div>
-		<div class="ite17">
-            17.beefaucet.org  <span style="color: green;">ZEDCASH</span>  
-            <button onclick="startCountdown('https://beefaucet.org/zec-faucet/', this)">zec</button> 
+		<div class="item17">
+            <img src="https://raw.githubusercontent.com/maiicki/app--Privacy-Policy/main/imagescryptos/zec.png" width="25" height="25" alt="zcash">   
+            <button onclick="startCountdown('https://beefaucet.org/zec-faucet/', this)">Claim</button> 
             <span class="countdown hidden">00m 00s</span>
         </div>
-		<div class="ite18">
-            18.beefaucet.org  <span style="color: green;">DASHCOIN</span>  
-            <button onclick="startCountdown('https://beefaucet.org/dash-faucet/', this)">dash</button> 
+		<div class="item18">
+            <img src="https://raw.githubusercontent.com/maiicki/app--Privacy-Policy/main/imagescryptos/dash.png" width="25" height="25" alt="dashcoin"> 
+            <button onclick="startCountdown('https://beefaucet.org/dash-faucet/', this)">Claim</button> 
             <span class="countdown hidden">00m 00s</span>
         </div>
-		<div class="ite19">
-            19.beefaucet.org  <span style="color: green;">DIGIBITE</span>  
-            <button onclick="startCountdown('https://beefaucet.org/dgb-faucet/', this)">dgb</button> 
+		<div class="item19">
+            <img src="https://raw.githubusercontent.com/maiicki/app--Privacy-Policy/main/imagescryptos/dgb.png" width="25" height="25" alt="digibyte">   
+            <button onclick="startCountdown('https://beefaucet.org/dgb-faucet/', this)">Claim</button> 
             <span class="countdown hidden">00m 00s</span>
         </div>
-		<div class="ite20">
-            20.beefaucet.org  <span style="color: green;">FEYCOINS</span>  
-            <button onclick="startCountdown('https://beefaucet.org/fey-faucet/', this)">fey</button> 
+		<div class="item20">
+            <img src="https://raw.githubusercontent.com/maiicki/app--Privacy-Policy/main/imagescryptos/fey.png" width="25" height="25" alt="feyora"> 
+            <button onclick="startCountdown('https://beefaucet.org/fey-faucet/', this)">Claim</button> 
             <span class="countdown hidden">00m 00s</span>
         </div>
-		<br>
-<br>
-<center>-------------------------------------------------------------------------------------------------</center>
-<body>
-    <center><u><h2>cryptofarida.com</h2></u></center>
-		<div class="address-list">
-        <div class="ite21">
-            21.cryptofarida.com  <span style="color: green;">BITCOIN</span>
-          <button onclick="startCountdown('https://cryptofarida.com/btc-faucet/', this)">btc</button> 
+                <!-- Ajoutez les autres items StarFaucet ici comme dans votre code original -->
+            </div>
+        </div>
+
+        <!-- MomoCoins Section -->
+        <div class="column">
+            <h2>Cryptofarida</h2>
+			<br><br>
+            <div class="address-list">
+                <div class="item21">
+            <img src="https://raw.githubusercontent.com/maiicki/app--Privacy-Policy/main/imagescryptos/btc.png" width="25" height="25" alt="Bitcoin">
+          <button onclick="startCountdown('https://cryptofarida.com/btc-faucet/', this)">Claim</button> 
             <span class="countdown hidden">00m 00s</span>
 		</div>
-		<div class="ite22">
-            22.cryptofarida.com <span style="color: green;">ETHERUM</span> 
-            <button onclick="startCountdown('https://cryptofarida.com/eth-faucet/', this)">eth</button> 
+		<div class="item22">
+            <img src="https://raw.githubusercontent.com/maiicki/app--Privacy-Policy/main/imagescryptos/eth.png" width="25" height="25" alt="ethereum">
+            <button onclick="startCountdown('https://cryptofarida.com/eth-faucet/', this)">Claim</button> 
             <span class="countdown hidden">00m 00s</span>
         </div>
-		<div class="ite23">
-            23.cryptofarida.com  <span style="color: green;">TETHER</span>   
-            <button onclick="startCountdown('https://cryptofarida.com/usdt-faucet/', this)">usdt</button> 
+		<div class="item23">
+            <img src="https://raw.githubusercontent.com/maiicki/app--Privacy-Policy/main/imagescryptos/usdt.png"  width="25" height="25" alt="tether">  
+            <button onclick="startCountdown('https://cryptofarida.com/usdt-faucet/', this)">Claim</button> 
             <span class="countdown hidden">00m 00s</span>
         </div>
-		<div class="ite24">
-            24.cryptofarida.com  <span style="color: green;">BINANCE</span> 
-            <button onclick="startCountdown('https://cryptofarida.com/bnb-faucet/', this)">bnb</button> 
+		<div class="item24">
+            <img src="https://raw.githubusercontent.com/maiicki/app--Privacy-Policy/main/imagescryptos/bnb.png"  width="25" height="25" alt="binance">
+            <button onclick="startCountdown('https://cryptofarida.com/bnb-faucet/', this)">Claim</button> 
             <span class="countdown hidden">00m 00s</span>
         </div>
-		<div class="ite25">
-            25.cryptofarida.com <span style="color: green;">SOLANA</span> 
-            <button onclick="startCountdown('https://cryptofarida.com/sol-faucet/', this)">sol</button> 
+		<div class="item25">
+            <img src="https://raw.githubusercontent.com/maiicki/app--Privacy-Policy/main/imagescryptos/sol.png" width="25" height="25" alt="solana"> 
+            <button onclick="startCountdown('https://cryptofarida.com/sol-faucet/', this)">Claim</button> 
             <span class="countdown hidden">00m 00s</span>
         </div>
-		<div class="ite26">
-           26.cryptofarida.com  <span style="color: green;">USDC</span> 
-            <button onclick="startCountdown('https://cryptofarida.com/usdc-faucet/', this)">usdc</button> 
+		<div class="item26">
+           <img src="https://raw.githubusercontent.com/maiicki/app--Privacy-Policy/main/imagescryptos/usdc.png" width="25" height="25" alt="usdc">  
+            <button onclick="startCountdown('https://cryptofarida.com/usdc-faucet/', this)">Claim</button> 
             <span class="countdown hidden">00m 00s</span>
         </div>
-		<div class="ite27">
-            27.cryptofarida.com  <span style="color: green;">RIPPLE</span>  
-            <button onclick="startCountdown('https://cryptofarida.com/xrp-faucet/', this)">xrp</button> 
+		<div class="item27">
+            <img src="https://raw.githubusercontent.com/maiicki/app--Privacy-Policy/main/imagescryptos/xrp.png" width="25" height="25" alt="riple"> 
+            <button onclick="startCountdown('https://cryptofarida.com/xrp-faucet/', this)">Claim</button> 
             <span class="countdown hidden">00m 00s</span>
         </div>
-		<div class="ite28">
-            28.cryptofarida.com  <span style="color: green;">DOGECOIN</span> 
-            <button onclick="startCountdown('https://cryptofarida.com/doge-faucet/', this)">doge</button> 
+		<div class="item28">
+            <img src="https://raw.githubusercontent.com/maiicki/app--Privacy-Policy/main/imagescryptos/doge.png" width="25" height="25" alt="dogecoin">
+            <button onclick="startCountdown('https://cryptofarida.com/doge-faucet/', this)">Claim</button> 
             <span class="countdown hidden">00m 00s</span>
         </div>
-		<div class="ite29">
-            29.cryptofarida.com <span style="color: green;">TRON</span> 
-            <button onclick="startCountdown('https://cryptofarida.com/trx-faucet/', this)">trx</button> 
+		<div class="item29">
+            <img src="https://raw.githubusercontent.com/maiicki/app--Privacy-Policy/main/imagescryptos/tron.png" width="25" height="25" alt="tron">  
+            <button onclick="startCountdown('https://cryptofarida.com/trx-faucet/', this)">Claim</button> 
             <span class="countdown hidden">00m 00s</span>
         </div>
-		<div class="ite30">
-            30.cryptofarida.com  <span style="color: green;">TON</span> 
-            <button onclick="startCountdown('https://cryptofarida.com/ton-faucet/', this)">ton</button> 
+		<div class="item30">
+            <img src="https://raw.githubusercontent.com/maiicki/app--Privacy-Policy/main/imagescryptos/ton.png" width="25" height="25" alt="ton">  
+            <button onclick="startCountdown('https://cryptofarida.com/ton-faucet/', this)">Claim</button> 
             <span class="countdown hidden">00m 00s</span>
         </div>
-		<div class="ite31">
-            31.cryptofarida.com  <span style="color: green;">BITCOINCASH</span> 
-            <button onclick="startCountdown('https://cryptofarida.com/bch-faucet/', this)">bch</button> 
+		<div class="item31">
+            <img src="https://raw.githubusercontent.com/maiicki/app--Privacy-Policy/main/imagescryptos/bch.png" width="25" height="25" alt="bitcoin cash"> 
+            <button onclick="startCountdown('https://cryptofarida.com/bch-faucet/', this)">Claim</button> 
             <span class="countdown hidden">00m 00s</span>
         </div>
-		<div class="ite32">
-            32.cryptofarida.com  <span style="color: green;">CARDANO</span>  
-            <button onclick="startCountdown('https://cryptofarida.com/ada-faucet/', this)">ada</button> 
+		<div class="item32">
+            <img src="https://raw.githubusercontent.com/maiicki/app--Privacy-Policy/main/imagescryptos/ada.png" width="25" height="25" alt="cardano">    
+            <button onclick="startCountdown('https://cryptofarida.com/ada-faucet/', this)">Claim</button> 
             <span class="countdown hidden">00m 00s</span>
         </div>
-		<div class="ite33">
-            33.cryptofarida.com  <span style="color: green;">LITCOIN</span>  
-            <button onclick="startCountdown('https://cryptofarida.com/ltc-faucet/', this)">ltc</button> 
+		<div class="item33">
+            <img src="https://raw.githubusercontent.com/maiicki/app--Privacy-Policy/main/imagescryptos/ltc.png"  width="25" height="25" alt="litecoin">  
+            <button onclick="startCountdown('https://cryptofarida.com/ltc-faucet/', this)">Claim</button> 
             <span class="countdown hidden">00m 00s</span>
        </div>
-		<div class="ite34">
-            34.cryptofarida.com  <span style="color: green;">MATIC</span>  
-            <button onclick="startCountdown('https://cryptofarida.com/matic-faucet/', this)">matic</button> 
+		<div class="item34">
+            <img src="https://raw.githubusercontent.com/maiicki/app--Privacy-Policy/main/imagescryptos/matic.png" width="25" height="25" alt="matic">     
+            <button onclick="startCountdown('https://cryptofarida.com/matic-faucet/', this)">Claim</button> 
             <span class="countdown hidden">00m 00s</span>
         </div>
-		<div class="ite35">
-            35.cryptofarida.com  <span style="color: green;">MONERO</span>  
-            <button onclick="startCountdown('https://cryptofarida.com/xmr-faucet/', this)">xmr</button> 
+		<div class="item35">
+            <img src="https://raw.githubusercontent.com/maiicki/app--Privacy-Policy/main/imagescryptos/xmr.png" width="25" height="25" alt="monero">    
+            <button onclick="startCountdown('https://cryptofarida.com/xmr-faucet/', this)">Claim</button> 
             <span class="countdown hidden">00m 00s</span>
         </div>
-		<div class="ite36">
-            36.cryptofarida.com  <span style="color: green;">STELAR</span>  
-            <button onclick="startCountdown('https://cryptofarida.com/xlm-faucet/', this)">xlm</button> 
+		<div class="item36">
+            <img src="https://raw.githubusercontent.com/maiicki/app--Privacy-Policy/main/imagescryptos/xlm.png" width="25" height="25" alt="stellar"> 
+            <button onclick="startCountdown('https://cryptofarida.com/xlm-faucet/', this)">Claim</button> 
             <span class="countdown hidden">00m 00s</span>
         </div>
-		<div class="ite37">
-            37.cryptofarida.com  <span style="color: green;">ZEDCASH</span>  
-            <button onclick="startCountdown('https://cryptofarida.com/zec-faucet/', this)">zec</button> 
+		<div class="item37">
+            <img src="https://raw.githubusercontent.com/maiicki/app--Privacy-Policy/main/imagescryptos/zec.png" width="25" height="25" alt="zcash">   
+            <button onclick="startCountdown('https://cryptofarida.com/zec-faucet/', this)">Claim</button> 
             <span class="countdown hidden">00m 00s</span>
         </div>
-		<div class="ite38">
-            38.cryptofarida.com  <span style="color: green;">DASHCOIN</span>  
-            <button onclick="startCountdown('https://cryptofarida.com/dash-faucet/', this)">dash</button> 
+		<div class="item38">
+            <img src="https://raw.githubusercontent.com/maiicki/app--Privacy-Policy/main/imagescryptos/dash.png" width="25" height="25" alt="dashcoin"> 
+            <button onclick="startCountdown('https://cryptofarida.com/dash-faucet/', this)">Claim</button> 
             <span class="countdown hidden">00m 00s</span>
         </div>
-		<div class="ite39">
-            39.cryptofarida.com  <span style="color: green;">DIGIBITE</span>  
-            <button onclick="startCountdown('https://cryptofarida.com/dgb-faucet/', this)">dgb</button> 
+		<div class="item39">
+            <img src="https://raw.githubusercontent.com/maiicki/app--Privacy-Policy/main/imagescryptos/dgb.png" width="25" height="25" alt="digibyte">   
+            <button onclick="startCountdown('https://cryptofarida.com/dgb-faucet/', this)">Claim</button> 
             <span class="countdown hidden">00m 00s</span>
         </div>
-		<div class="ite40">
-            40.cryptofarida.com  <span style="color: green;">FEYCOINS</span>  
-            <button onclick="startCountdown('https://cryptofarida.com/fey-faucet/', this)">fey</button> 
+		<div class="item40">
+            <img src="https://raw.githubusercontent.com/maiicki/app--Privacy-Policy/main/imagescryptos/fey.png" width="25" height="25" alt="feyora"> 
+            <button onclick="startCountdown('https://cryptofarida.com/fey-faucet/', this)">Claim</button> 
             <span class="countdown hidden">00m 00s</span>
         </div>
-        <!-- Ajoutez d'autres adresses ici si nécessaire -->
+                <!-- Ajoutez les autres items MomoCoins ici comme dans votre code original -->
+            </div>
+        </div>
     </div>
 
     <script>
-        function startCountdown(url, button) {
-            const countdownElement = button.nextElementSibling;
-            countdownElement.classList.remove('hidden');
+    function startCountdown(url, button) {
+        const countdownElement = button.nextElementSibling;
+        countdownElement.classList.remove('hidden');
 
-            let timeLeft = 360; // Durée du compte à rebours en secondes (ici 6 minutes)
-            button.disabled = true; // Désactiver le bouton une fois cliqué
+        let timeLeft = 360; // Durée du compte à rebours en secondes (6 minutes)
+        button.disabled = true; // Désactiver le bouton une fois cliqué
 
-            // Ouvrir l'URL dans un nouvel onglet immédiatement
-            const newWindow = window.open(url, '_blank');
-             // Ouvrir l'URL dans une nouvelle fenêtre immédiatement
-            //const newWindow = window.open(url, '_blank', 'width=800,height=600,top=100,left=100');
-		
-            const interval = setInterval(function() {
-                const minutes = Math.floor(timeLeft / 60);
-                const seconds = timeLeft % 60;
-                countdownElement.textContent = `Temps restant : ${minutes}m ${seconds}s`;
-                timeLeft--;
+        // Ouvrir l'URL dans un nouvel onglet immédiatement
+        const newWindow = window.open(url, '_blank');
 
-                if (timeLeft < 0) {
-                    clearInterval(interval);
-                    countdownElement.textContent = '00m 00s';
-                    button.disabled = false; // Réactiver le bouton si nécessaire après la fin du compte à rebours
-                }
-            }, 1000);
+        const endTime = Date.now() + timeLeft * 1000; // Calculer l'heure de fin
+
+        function updateCountdown() {
+            const now = Date.now();
+            const remainingTime = Math.max(0, Math.floor((endTime - now) / 1000));
+            const minutes = Math.floor(remainingTime / 60);
+            const seconds = remainingTime % 60;
+
+            countdownElement.textContent = `Temps restant : ${minutes}m ${seconds}s`;
+
+            if (remainingTime > 0) {
+                // Utiliser setTimeout au lieu de setInterval pour recalculer le temps restant
+                setTimeout(updateCountdown, 1000);
+            } else {
+                countdownElement.textContent = '00m 00s';
+                button.disabled = false; // Réactiver le bouton après la fin du compte à rebours
+            }
         }
-    </script>
+
+        updateCountdown(); // Démarrer la mise à jour du compte à rebours
+    }
+</script>
 
 </body>
 </html>
