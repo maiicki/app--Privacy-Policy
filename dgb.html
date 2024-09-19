@@ -178,7 +178,7 @@
             const minutes = Math.floor(remainingTime / 60);
             const seconds = remainingTime % 60;
 
-            countdownElement.textContent = `Temps restant : ${minutes}m ${seconds}s`;
+            countdownElement.textContent = `${minutes}m ${seconds}s`;
 
             if (remainingTime > 0) {
                 // Utiliser setTimeout au lieu de setInterval pour recalculer le temps restant
